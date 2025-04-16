@@ -18,7 +18,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 groupId = 'com.github.ngochoangdirox'
-                artifactId = 'spotify-player-24-noconnect-2.20b'
+                artifactId = 'spotify-aar-wrapper'
                 version = '1.0.0'
 
                 artifact file('spotify-player-24-noconnect-2.20b.aar')
