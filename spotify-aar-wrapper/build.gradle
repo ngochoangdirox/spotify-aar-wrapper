@@ -12,6 +12,18 @@ android {
         targetSdkVersion 33
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            // Don't minify, since it's prebuilt
+            minifyEnabled false
+        }
+    }
+
     publishing {
         singleVariant("release")
     }
