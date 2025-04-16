@@ -1,8 +1,20 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // or your preferred version
+    }
+}
+
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
+    namespace 'com.spotify.sdk' // required for AGP 8+
     compileSdkVersion 33
+
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 33
@@ -19,7 +31,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.ngochoangdirox'
                 artifactId = 'spotify-aar-wrapper'
-                version = '1.0.0'
+                version = '1.0.2'
 
                 artifact file('spotify-player-24-noconnect-2.20b.aar')
             }
