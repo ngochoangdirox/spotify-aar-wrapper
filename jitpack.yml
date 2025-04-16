@@ -1,2 +1,5 @@
 jdk:
-    - openjdk11
+    - openjdk17
+install:
+    - FILE="-Dfile=spotify-player-24-noconnect-2.20b.aar"
+    - mvn install:install-file $FILE -DgroupId=com.github.ngochoangdirox -DartifactId=spotify-aar-wrapper -Dversion=1.0.0 -Dpackaging=aar -DgeneratePom=true
